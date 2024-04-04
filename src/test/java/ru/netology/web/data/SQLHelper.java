@@ -27,7 +27,7 @@ public class SQLHelper {
     @SneakyThrows
     public static void cleanDatabase() {
         var connection = getConn();
-        QUERY_RUNNER.execute(connection, "DELETE FROM auth-code");
+        QUERY_RUNNER.execute(connection, "DELETE FROM auth_codes");
         QUERY_RUNNER.execute(connection, "DELETE FROM card_transactions");
         QUERY_RUNNER.execute(connection, "DELETE FROM cards");
         QUERY_RUNNER.execute(connection, "DELETE FROM users");
@@ -36,7 +36,7 @@ public class SQLHelper {
     @SneakyThrows
     public static void cleanAuthCodes() {
         var connection = getConn();
-        QUERY_RUNNER.execute(connection, "DELETE FROM auth-code");
+        QUERY_RUNNER.execute(connection, "DELETE FROM auth_codes");
     }
 
 }

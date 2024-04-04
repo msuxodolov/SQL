@@ -50,15 +50,16 @@ class MoneyTransferTest {
         loginPageV1.verifyErrorNotification("Ошибка! Неверно указан логин или пароль");
     }
 
+
     @Test
-    @DisplayName("Неверный пароль")
-    void shouldMistakePasswordLogin() {
+    @DisplayName("Неверный код верификации")
+    void shouldInvalidCodes() {
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = loginPageV1.validLogin(authInfo);
         verificationPage.veryfyVerificationPageVisiblity();
         var verificationCode = DataHelper.generateRandomVerificationCode();
         verificationPage.verify(verificationCode.getCode());
-        verificationPage.verifyErrorNotification("Ошибка! Неверно указан код! Попробуйте еще раз");
+        verificationPage.verifyErrorNotification("Ошибка! Неверно указан код! Попробуйте ещё раз.");
     }
 
 }
