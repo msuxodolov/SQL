@@ -51,16 +51,16 @@ class MoneyTransferTest {
     }
 
 
-//    @Test
-//    @DisplayName("Неверный код верификации")
-//    void shouldInvalidCodes() {
-//        var authInfo = DataHelper.getAuthInfo();
-//        var verificationPage = loginPageV1.validLogin(authInfo);
-//        verificationPage.veryfyVerificationPageVisiblity();
-//        var verificationCode = DataHelper.generateRandomVerificationCode();
-//        verificationPage.verify(verificationCode.getCode());
-//        verificationPage.verifyErrorNotification("Ошибка! Неверно указан код! Попробуйте ещё раз.");
-//    }
+    @Test
+    @DisplayName("Неверный код верификации")
+    void shouldInvalidCodes() {
+        var authInfo = DataHelper.getAuthInfo();
+        var verificationPage = loginPageV1.validLogin(authInfo);
+        verificationPage.veryfyVerificationPageVisiblity();
+        var verificationCode = DataHelper.generateRandomVerificationCode();
+        verificationPage.verify(verificationCode.getCode());
+        verificationPage.verifyErrorNotification("Ошибка! Неверно указан код! Попробуйте ещё раз.");
+    }
 
 }
 
