@@ -1,0 +1,1 @@
+[![Java CI with Gradle](https://github.com/msuxodolov/AQ_Allure_ReportPortal/actions/workflows/gradle.yml/badge.svg)](https://github.com/msuxodolov/AQ_Allure_ReportPortal/actions/workflows/gradle.yml)
