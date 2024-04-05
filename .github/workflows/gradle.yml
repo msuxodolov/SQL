@@ -16,10 +16,10 @@ jobs:
           distribution: 'adopt'
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Waiting for сontainer start
-        run: sleep 30
       - name: Container start
         run: docker-compose up &
+      - name: Waiting for сontainer start
+        run: sleep 30
       - name: Start SUT
         # Запускаем SUT,
         # имя файла SUT будет отличаться в каждой задаче.
